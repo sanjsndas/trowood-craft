@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - TrowoodCraft</title>
+    <style>
+        /* Reusing the same CSS as index.html for consistent styling */
+        :root {
+            --primary-color: #5D4037;
+            --accent-beige: #D7CCC8;
+            --accent-green: #8E9E82;
+            --accent-grey: #424242;
+            --text-light: #f5f5f5;
+            --text-dark: #333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--accent-beige);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-text h1 {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .logo-text p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .terms-content {
+            padding: 50px 0;
+            background-color: var(--text-light);
+        }
+        
+        .terms-content h1 {
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            font-size: 36px;
+            text-align: center;
+        }
+        
+        .terms-content h2 {
+            color: var(--primary-color);
+            margin: 40px 0 20px;
+            font-size: 28px;
+            border-bottom: 1px solid var(--accent-beige);
+            padding-bottom: 10px;
+        }
+        
+        .terms-content h3 {
+            color: var(--primary-color);
+            margin: 30px 0 15px;
+            font-size: 22px;
+        }
+        
+        .terms-content p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .terms-content ul, .terms-content ol {
+            margin-bottom: 20px;
+            padding-left: 30px;
+        }
+        
+        .terms-content li {
+            margin-bottom: 10px;
+        }
+        
+        .highlight-box {
+            background-color: var(--accent-beige);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 5px solid var(--primary-color);
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent-beige);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            opacity: 1;
+            padding-left: 5px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-bottom p {
+            opacity: 0.6;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo {
+                margin-bottom: 20px;
+                justify-content: center;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 5px 10px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-text">
+                    <h1>TrowoodCraft</h1>
+                    <p>Crafting Timeless Living</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Terms Content Section -->
+    <section class="terms-content">
+        <div class="container">
+            <h1>Terms of Service</h1>
+            <p>Last Updated: January 1, 2023</p>
+            
+            <div class="highlight-box">
+                <p>Welcome to TrowoodCraft! These Terms of Service ("Terms") govern your access to and use of our website, products, and services ("Services"). By accessing or using our Services, you agree to be bound by these Terms and our Privacy Policy. If you do not agree to these Terms, please do not use our Services.</p>
+            </div>
+            
+            <h2>1. Definitions</h2>
+            <p>In these Terms:</p>
+            <ul>
+                <li><strong>"TrowoodCraft," "we," "us," or "our"</strong> refers to TrowoodCraft LLC, its affiliates, and subsidiaries.</li>
+                <li><strong>"You" or "your"</strong> refers to you as a user of our Services.</li>
+                <li><strong>"Products"</strong> refers to all furniture, home goods, and related items offered for sale through our Services.</li>
+                <li><strong>"Custom Orders"</strong> refers to products that are made-to-order based on your specifications.</li>
+                <li><strong>"Website"</strong> refers to www.trowoodcraft.com and all associated web pages.</li>
+            </ul>
+            
+            <h2>2. Eligibility</h2>
+            <p>To use our Services, you must:</p>
+            <ul>
+                <li>Be at least 18 years old or the age of majority in your jurisdiction</li>
+                <li>Have the legal capacity to enter into a binding contract</li>
+                <li>Not be prohibited from receiving our Services under applicable laws</li>
+            </ul>
+            <p>By using our Services, you represent and warrant that you meet all eligibility requirements.</p>
+            
+            <h2>3. Account Registration</h2>
+            <p>Certain features of our Services may require account registration. When registering, you agree to:</p>
+            <ul>
+                <li>Provide accurate, current, and complete information</li>
+                <li>Maintain and promptly update your information</li>
+                <li>Maintain the confidentiality of your account credentials</li>
+                <li>Accept responsibility for all activities that occur under your account</li>
+                <li>Notify us immediately of any unauthorized use of your account</li>
+            </ul>
+            <p>We reserve the right to refuse service, terminate accounts, or remove content at our sole discretion.</p>
+            
+            <h2>4. Products and Services</h2>
+            <h3>4.1 Product Descriptions</h3>
+            <p>We strive to accurately describe our products through photographs, specifications, and other details. However:</p>
+            <ul>
+                <li>Natural wood products may vary in color, grain, and texture</li>
+                <li>Actual colors may differ due to monitor settings</li>
+                <li>Dimensions are approximate and may vary slightly</li>
+                <li>We reserve the right to modify product specifications without notice</li>
+            </ul>
+            
+            <h3>4.2 Custom Orders</h3>
+            <p>Custom furniture orders are subject to additional terms:</p>
+            <ul>
+                <li>Require a 50% non-refundable deposit upon order confirmation</li>
+                <li>Lead times vary based on complexity and current workload</li>
+                <li>Design changes after production begins may incur additional fees</li>
+                <li>Final approval of materials and design is your responsibility</li>
+            </ul>
+            
+            <h3>4.3 Made-to-Order Items</h3>
+            <p>Most of our furniture is made-to-order, meaning:</p>
+            <ul>
+                <li>Production begins after your order is placed</li>
+                <li>Cancellation may only be possible within 24 hours of ordering</li>
+                <li>Delivery times are estimates and not guarantees</li>
+            </ul>
+            
+            <h2>5. Pricing and Payments</h2>
+            <h3>5.1 Pricing</h3>
+            <p>All prices are in US dollars unless otherwise stated. We reserve the right to:</p>
+            <ul>
+                <li>Adjust prices at any time without notice</li>
+                <li>Correct pricing errors that may occur</li>
+                <li>Change product availability</li>
+            </ul>
+            
+            <h3>5.2 Payment Methods</h3>
+            <p>We accept the following payment methods:</p>
+            <ul>
+                <li>Major credit cards (Visa, MasterCard, American Express, Discover)</li>
+                <li>PayPal</li>
+                <li>Bank transfers (for large custom orders)</li>
+            </ul>
+            <p>You represent that you have the legal right to use any payment method you provide.</p>
+            
+            <h3>5.3 Sales Tax</h3>
+            <p>Applicable sales tax will be added to your order based on your shipping address. We collect sales tax for all orders shipped to states where we have a physical presence.</p>
+            
+            <h2>6. Shipping and Delivery</h2>
+            <h3>6.1 Shipping Options</h3>
+            <p>We offer several shipping options:</p>
+            <ul>
+                <li>Standard ground shipping (5-10 business days)</li>
+                <li>White-glove delivery service (included with large furniture items)</li>
+                <li>Local pickup from our workshop (by appointment only)</li>
+            </ul>
+            
+            <h3>6.2 Delivery Times</h3>
+            <p>Delivery times are estimates only and not guaranteed. Factors that may affect delivery include:</p>
+            <ul>
+                <li>Custom order production time</li>
+                <li>Shipping carrier delays</li>
+                <li>Weather conditions</li>
+                <li>Availability of delivery personnel</li>
+            </ul>
+            
+            <h3>6.3 International Shipping</h3>
+            <p>International orders are subject to:</p>
+            <ul>
+                <li>Additional shipping costs and import duties</li>
+                <li>Customs clearance procedures</li>
+                <li>Potential restrictions on certain wood products</li>
+            </ul>
+            <p>You are responsible for all import fees and compliance with local laws.</p>
+            
+            <h2>7. Returns and Refunds</h2>
+            <h3>7.1 Standard Return Policy</h3>
+            <p>Due to the custom nature of our products:</p>
+            <ul>
+                <li>Made-to-order items cannot be returned unless defective</li>
+                <li>Ready-to-ship items may be returned within 14 days of delivery</li>
+                <li>Return shipping costs are your responsibility</li>
+                <li>A 15% restocking fee may apply</li>
+            </ul>
+            
+            <h3>7.2 Damaged or Defective Items</h3>
+            <p>If your item arrives damaged or defective:</p>
+            <ul>
+                <li>Notify us within 48 hours of delivery</li>
+                <li>Provide photographs of the damage</li>
+                <li>We will arrange for repair, replacement, or refund</li>
+            </ul>
+            
+            <h3>7.3 Refund Processing</h3>
+            <p>Approved refunds will be processed within 10 business days and issued to the original payment method.</p>
+            
+            <h2>8. Warranties</h2>
+            <h3>8.1 Craftsmanship Warranty</h3>
+            <p>All TrowoodCraft products come with:</p>
+            <ul>
+                <li>5-year warranty against defects in materials and workmanship</li>
+                <li>Coverage for structural integrity under normal use</li>
+                <li>Repair or replacement at our discretion</li>
+            </ul>
+            
+            <h3>8.2 Warranty Exclusions</h3>
+            <p>The warranty does not cover:</p>
+            <ul>
+                <li>Damage from misuse, abuse, or accidents</li>
+                <li>Normal wear and tear</li>
+                <li>Improper maintenance or cleaning</li>
+                <li>Modifications made after delivery</li>
+                <li>Natural variations in wood grain or color</li>
+            </ul>
+            
+            <h3>8.3 Warranty Claims</h3>
+            <p>To make a warranty claim:</p>
+            <ul>
+                <li>Contact our customer service with proof of purchase</li>
+                <li>Provide photographs of the issue</li>
+                <li>We may require return of the item for inspection</li>
+            </ul>
+            
+            <h2>9. Intellectual Property</h2>
+            <h3>9.1 Ownership</h3>
+            <p>All content on our Services, including:</p>
+            <ul>
+                <li>Text, graphics, logos, and images</li>
+                <li>Product designs and configurations</li>
+                <li>Software and website code</li>
+            </ul>
+            <p>are owned by or licensed to TrowoodCraft and protected by intellectual property laws.</p>
+            
+            <h3>9.2 Limited License</h3>
+            <p>We grant you a limited, revocable license to:</p>
+            <ul>
+                <li>Access and use our Services for personal, non-commercial purposes</li>
+                <li>Make purchases through our website</li>
+            </ul>
+            <p>This license does not include any right to:</p>
+            <ul>
+                <li>Reproduce, duplicate, or copy our products or content</li>
+                <li>Use our intellectual property without express written permission</li>
+                <li>Reverse engineer or extract source code</li>
+            </ul>
+            
+            <h3>9.3 User Content</h3>
+            <p>If you submit content to us (reviews, photos, etc.):</p>
+            <ul>
+                <li>You retain ownership of your content</li>
+                <li>You grant us a perpetual license to use, display, and modify the content</li>
+                <li>You represent you have all necessary rights to the content</li>
+            </ul>
+            
+            <h2>10. User Conduct</h2>
+            <p>When using our Services, you agree not to:</p>
+            <ul>
+                <li>Violate any laws or regulations</li>
+                <li>Infringe on others' rights</li>
+                <li>Use our Services for fraudulent or harmful purposes</li>
+                <li>Interfere with the operation of our Services</li>
+                <li>Attempt to gain unauthorized access to our systems</li>
+                <li>Submit false or misleading information</li>
+                <li>Engage in any harassing, abusive, or harmful behavior</li>
+            </ul>
+            
+            <h2>11. Third-Party Links and Services</h2>
+            <p>Our Services may contain links to third-party websites or services. We:</p>
+            <ul>
+                <li>Are not responsible for third-party content or practices</li>
+                <li>Do not endorse or make representations about third-party services</li>
+                <li>Have no liability for your use of third-party services</li>
+            </ul>
+            
+            <h2>12. Disclaimers</h2>
+            <p>Our Services are provided "as is" and "as available" without warranties of any kind. We disclaim all warranties, express or implied, including:</p>
+            <ul>
+                <li>Merchantability</li>
+                <li>Fitness for a particular purpose</li>
+                <li>Non-infringement</li>
+                <li>Accuracy or reliability of content</li>
+                <li>Uninterrupted or error-free operation</li>
+            </ul>
+            <p>We do not warrant that our products will meet all your expectations or be compatible with all environments.</p>
+            
+            <h2>13. Limitation of Liability</h2>
+            <p>To the maximum extent permitted by law, TrowoodCraft shall not be liable for:</p>
+            <ul>
+                <li>Any indirect, incidental, or consequential damages</li>
+                <li>Loss of profits, data, or use</li>
+                <li>Personal injury or property damage</li>
+                <li>Any damages exceeding the amount you paid for the product or service</li>
+            </ul>
+            <p>Some jurisdictions do not allow limitations on liability, so these limitations may not apply to you.</p>
+            
+            <h2>14. Indemnification</h2>
+            <p>You agree to indemnify and hold harmless TrowoodCraft and its affiliates from any claims, damages, or expenses arising from:</p>
+            <ul>
+                <li>Your use of our Services</li>
+                <li>Your violation of these Terms</li>
+                <li>Your infringement of any rights</li>
+                <li>Your conduct in connection with our Services</li>
+            </ul>
+            
+            <h2>15. Dispute Resolution</h2>
+            <h3>15.1 Informal Resolution</h3>
+            <p>Before initiating formal proceedings, you agree to attempt to resolve disputes informally by contacting our customer service.</p>
+            
+            <h3>15.2 Binding Arbitration</h3>
+            <p>If informal resolution fails, any disputes shall be resolved through binding arbitration in Portland, Oregon under the rules of the American Arbitration Association.</p>
+            
+            <h3>15.3 Class Action Waiver</h3>
+            <p>You waive any right to participate in class actions or class arbitrations. Claims must be brought individually.</p>
+            
+            <h3>15.4 Governing Law</h3>
+            <p>These Terms shall be governed by Oregon law without regard to conflict of law principles.</p>
+            
+            <h2>16. Changes to Terms</h2>
+            <p>We may modify these Terms at any time by posting updated terms on our website. Your continued use after changes constitutes acceptance. Material changes will be communicated via email or prominent website notice.</p>
+            
+            <h2>17. Termination</h2>
+            <p>We may terminate or suspend your access to our Services at any time without notice for any reason, including violation of these Terms. You may stop using our Services at any time.</p>
+            
+            <h2>18. General Provisions</h2>
+            <h3>18.1 Entire Agreement</h3>
+            <p>These Terms constitute the entire agreement between you and TrowoodCraft regarding our Services.</p>
+            
+            <h3>18.2 Severability</h3>
+            <p>If any provision is found invalid or unenforceable, the remaining provisions will remain in full effect.</p>
+            
+            <h3>18.3 Waiver</h3>
+            <p>Our failure to enforce any right or provision will not constitute a waiver.</p>
+            
+            <h3>18.4 Assignment</h3>
+            <p>You may not assign your rights under these Terms without our written consent. We may assign our rights without restriction.</p>
+            
+            <h3>18.5 Force Majeure</h3>
+            <p>We are not liable for delays or failures due to events beyond our reasonable control.</p>
+            
+            <h2>19. Contact Information</h2>
+            <p>For questions about these Terms, please contact us at:</p>
+            <address>
+                TrowoodCraft LLC<br>
+                123 Artisan Way<br>
+                Woodcraft District<br>
+                Portland, OR 97209<br>
+                Email: legal@trowoodcraft.com<br>
+                Phone: (503) 555-0192
+            </address>
+            
+            <div class="highlight-box">
+                <p>By using our Services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service. If you do not agree to these Terms, please do not use our Services.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>About TrowoodCraft</h3>
+                    <p>Specializing in custom-made wooden furniture, blending heritage techniques with modern aesthetics. Crafting timeless pieces since 2010.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Customer Service</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping & Delivery</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Product Care</a></li>
+                        <li><a href="#">Warranty Information</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Visit Our Workshop</h3>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Artisan Way<br>
+                        Woodcraft District<br>
+                        Portland, OR 97209</p>
+                        <p><i class="fas fa-phone"></i> (503) 555-0192</p>
+                        <p><i class="fas fa-envelope"></i> hello@trowoodcraft.com</p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 TrowoodCraft. All Rights Reserved. | Crafting Timeless Living.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

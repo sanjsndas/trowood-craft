@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | TrowoodCraft - Crafting Timeless Living</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #5D4037; /* Deep Walnut Brown */
+            --accent-beige: #D7CCC8; /* Sandstone Beige */
+            --accent-green: #8E9E82; /* Olive Green */
+            --accent-grey: #424242; /* Iron Grey */
+            --text-light: #f5f5f5;
+            --text-dark: #333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--accent-beige);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 50px;
+            margin-right: 15px;
+        }
+        
+        .logo-text h1 {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .logo-text p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        
+        /* Navigation Styles */
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Main Content Styles */
+        .privacy-policy {
+            padding: 80px 0;
+            background-color: var(--text-light);
+        }
+        
+        .policy-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+        }
+        
+        .policy-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .policy-header h1 {
+            font-size: 36px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .policy-header p {
+            font-size: 18px;
+            color: var(--accent-grey);
+        }
+        
+        .policy-content h2 {
+            color: var(--primary-color);
+            margin: 40px 0 20px;
+            font-size: 28px;
+            border-bottom: 1px solid var(--accent-beige);
+            padding-bottom: 10px;
+        }
+        
+        .policy-content h3 {
+            color: var(--primary-color);
+            margin: 30px 0 15px;
+            font-size: 22px;
+        }
+        
+        .policy-content p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .policy-content ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        
+        .policy-content li {
+            margin-bottom: 10px;
+        }
+        
+        .highlight-box {
+            background-color: var(--accent-beige);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .highlight-box h4 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .update-date {
+            text-align: right;
+            font-style: italic;
+            color: var(--accent-grey);
+            margin-top: 50px;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 60px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent-beige);
+        }
+        
+        .footer-col p {
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            opacity: 1;
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--text-light);
+            text-align: center;
+            line-height: 40px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--accent-beige);
+            color: var(--primary-color);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-bottom p {
+            opacity: 0.6;
+            font-size: 14px;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo {
+                margin-bottom: 20px;
+                justify-content: center;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 5px 10px;
+            }
+            
+            .policy-container {
+                padding: 20px;
+            }
+            
+            .policy-header h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-text">
+                    <h1>TrowoodCraft</h1>
+                    <p>Crafting Timeless Living</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Privacy Policy Content -->
+    <section class="privacy-policy">
+        <div class="policy-container">
+            <div class="policy-header">
+                <h1>Privacy Policy</h1>
+                <p>Last Updated: June 15, 2023</p>
+            </div>
+            
+            <div class="policy-content">
+                <p>At TrowoodCraft ("we," "us," or "our"), we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website trowoodcraft.com (the "Site") or engage with our services. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the Site.</p>
+                
+                <div class="highlight-box">
+                    <h4>Key Points</h4>
+                    <p>This summary highlights key points from our Privacy Policy, but please read the full policy for complete information:</p>
+                    <ul>
+                        <li>We collect personal information you provide directly and automatically through your use of our Site</li>
+                        <li>We use information to provide services, improve our offerings, and communicate with you</li>
+                        <li>We may share information with service providers and when required by law</li>
+                        <li>You have choices about your information and how we communicate with you</li>
+                        <li>We implement security measures but cannot guarantee absolute security</li>
+                    </ul>
+                </div>
+                
+                <h2>1. Information We Collect</h2>
+                <p>We collect several types of information from and about users of our Site, including:</p>
+                
+                <h3>Personal Information You Provide</h3>
+                <p>When you interact with our Site, you may provide us with certain personally identifiable information that can be used to contact or identify you ("Personal Information"), including:</p>
+                <ul>
+                    <li><strong>Contact Information:</strong> Name, email address, phone number, shipping/billing address</li>
+                    <li><strong>Account Information:</strong> Username, password, profile information</li>
+                    <li><strong>Payment Information:</strong> Credit card numbers, billing details (processed securely by our payment processors)</li>
+                    <li><strong>Order Information:</strong> Products purchased, design specifications, delivery instructions</li>
+                    <li><strong>Communications:</strong> Contents of messages you send through forms, email, or chat</li>
+                    <li><strong>Preferences:</strong> Design preferences, wood type selections, style interests</li>
+                    <li><strong>Project Details:</strong> For custom orders, measurements, sketches, and other specifications</li>
+                </ul>
+                
+                <h3>Information Collected Automatically</h3>
+                <p>As you navigate through our Site, we may use automatic data collection technologies to collect certain information about your equipment, browsing actions, and patterns, including:</p>
+                <ul>
+                    <li><strong>Usage Details:</strong> Details of your visits to our Site, including traffic data, location data, logs, and other communication data and the resources that you access and use on the Site</li>
+                    <li><strong>Device Information:</strong> Information about your computer and internet connection, including your IP address, operating system, and browser type</li>
+                    <li><strong>Location Information:</strong> Approximate geographic location derived from your IP address or more precise location if you permit this through your device settings</li>
+                    <li><strong>Cookies and Tracking Technologies:</strong> For more information, see our <a href="cookies.html">Cookie Policy</a></li>
+                </ul>
+                
+                <h3>Information from Third Parties</h3>
+                <p>We may receive information about you from third parties, such as:</p>
+                <ul>
+                    <li>Social media platforms when you interact with us or our content</li>
+                    <li>Payment processors regarding the status of your payments</li>
+                    <li>Service providers who assist with fraud prevention and security</li>
+                    <li>Marketing partners who provide us with contact information for potential customers (with consent where required)</li>
+                </ul>
+                
+                <h2>2. How We Use Your Information</h2>
+                <p>We use the information we collect for various business purposes, including:</p>
+                
+                <h3>To Provide Our Services</h3>
+                <ul>
+                    <li>Process and fulfill your orders for furniture and related services</li>
+                    <li>Design and create custom furniture pieces according to your specifications</li>
+                    <li>Communicate with you about your orders, including order confirmations, shipping notifications, and delivery updates</li>
+                    <li>Provide customer support and respond to your inquiries</li>
+                    <li>Manage your account and preferences</li>
+                    <li>Process payments and prevent transactional fraud</li>
+                    <li>Coordinate delivery, installation, and any necessary follow-up services</li>
+                </ul>
+                
+                <h3>To Improve Our Offerings</h3>
+                <ul>
+                    <li>Understand how users interact with our Site to improve functionality and user experience</li>
+                    <li>Develop new products and services based on customer preferences and feedback</li>
+                    <li>Conduct research and analysis to enhance our craftsmanship and designs</li>
+                    <li>Test and implement new features on our Site</li>
+                    <li>Troubleshoot technical issues and maintain system security</li>
+                </ul>
+                
+                <h3>For Marketing and Communications</h3>
+                <ul>
+                    <li>Send you information about products, services, promotions, and events that may interest you (where you have consented to receive such communications)</li>
+                    <li>Personalize your experience by showing you content and offers tailored to your interests</li>
+                    <li>Measure the effectiveness of our marketing campaigns</li>
+                    <li>Administer contests, sweepstakes, or other promotions</li>
+                    <li>Request feedback through surveys or reviews</li>
+                </ul>
+                
+                <h3>For Business Operations and Legal Compliance</h3>
+                <ul>
+                    <li>Protect against fraudulent, unauthorized, or illegal activity and prosecute those responsible</li>
+                    <li>Comply with legal obligations, such as tax and accounting requirements</li>
+                    <li>Enforce our Terms of Service and other agreements</li>
+                    <li>Maintain appropriate business records</li>
+                    <li>Protect our rights, property, or safety, and that of our customers or others</li>
+                    <li>Support corporate transactions such as mergers, acquisitions, or asset sales</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <h4>Legal Basis for Processing (For EEA Users)</h4>
+                    <p>If you are located in the European Economic Area (EEA), our legal basis for collecting and using your personal information depends on the context in which we collect it. We typically rely on:</p>
+                    <ul>
+                        <li><strong>Contractual necessity:</strong> When we need the information to fulfill our contract with you (e.g., to process your order)</li>
+                        <li><strong>Legitimate interests:</strong> When processing serves our legitimate business interests (e.g., website security, fraud prevention, marketing) that aren't overridden by your rights</li>
+                        <li><strong>Consent:</strong> Where we've obtained your clear consent (e.g., for certain marketing communications)</li>
+                        <li><strong>Legal compliance:</strong> When we need to process information to comply with legal obligations</li>
+                    </ul>
+                </div>
+                
+                <h2>3. How We Share Your Information</h2>
+                <p>We may share your personal information in the following situations:</p>
+                
+                <h3>With Service Providers</h3>
+                <p>We engage certain trusted third parties to perform functions and provide services to us ("Service Providers"), including:</p>
+                <ul>
+                    <li>Payment processors (e.g., Stripe, PayPal) to securely handle transactions</li>
+                    <li>Shipping carriers (e.g., FedEx, UPS) to deliver your orders</li>
+                    <li>Installation professionals for furniture assembly services</li>
+                    <li>IT and cloud service providers for website hosting, data storage, and analytics</li>
+                    <li>Marketing platforms for email campaigns and advertising</li>
+                    <li>Customer support tools to manage inquiries and service requests</li>
+                </ul>
+                <p>We only share the minimum necessary information with these providers and require them to protect your information consistent with this policy.</p>
+                
+                <h3>For Business Transfers</h3>
+                <p>If we are involved in a merger, acquisition, asset sale, financing, or similar transaction, we may transfer your information as part of that deal. We will notify you if the new entity's handling of your information will materially differ from this policy.</p>
+                
+                <h3>For Legal Compliance and Protection</h3>
+                <p>We may disclose your information if required to do so by law or in response to valid requests by public authorities (e.g., court orders, subpoenas). We may also share information when we believe disclosure is necessary to:</p>
+                <ul>
+                    <li>Comply with applicable laws and regulations</li>
+                    <li>Protect our rights, privacy, safety, or property, and/or that of our affiliates, you, or others</li>
+                    <li>Prevent or investigate possible wrongdoing in connection with the Site</li>
+                    <li>Enforce our Terms of Service or other agreements</li>
+                    <li>Respond to claims that any content violates the rights of third parties</li>
+                    <li>Respond to your requests for customer service</li>
+                </ul>
+                
+                <h3>With Your Consent</h3>
+                <p>We may share your information with other third parties when we have your explicit consent to do so. For example, if you choose to participate in a joint promotion with another company, we may share information as described at the time of collection.</p>
+                
+                <h3>Aggregated or Anonymized Data</h3>
+                <p>We may share aggregated or anonymized information that does not directly identify you with partners or the public. For example, we may publish statistics about wood type preferences or common design trends among our customers.</p>
+                
+                <h2>4. Data Security</h2>
+                <p>We implement appropriate technical and organizational measures to protect the security of your personal information. However, please be aware that no security measures are perfect or impenetrable, and we cannot guarantee the absolute security of your information.</p>
+                
+                <h3>Our Security Measures Include:</h3>
+                <ul>
+                    <li><strong>Encryption:</strong> Using SSL technology to encrypt data transmitted to and from our Site</li>
+                    <li><strong>Access Controls:</strong> Limiting access to personal information to employees who need it to perform their jobs</li>
+                    <li><strong>Secure Storage:</strong> Storing sensitive information like payment details using industry-standard encryption</li>
+                    <li><strong>Regular Audits:</strong> Conducting periodic reviews of our security practices and systems</li>
+                    <li><strong>Employee Training:</strong> Educating our staff on data protection best practices</li>
+                    <li><strong>Incident Response:</strong> Maintaining procedures to respond to potential data breaches</li>
+                </ul>
+                
+                <h3>Your Role in Security</h3>
+                <p>You also play an important role in keeping your information secure:</p>
+                <ul>
+                    <li>Choose a strong password for your account and keep it confidential</li>
+                    <li>Do not share your login credentials with others</li>
+                    <li>Be cautious about the information you post in public areas of the Site</li>
+                    <li>Log out of your account when using shared computers</li>
+                    <li>Keep your devices secure with updated software and antivirus protection</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <h4>Payment Security</h4>
+                    <p>All payment transactions are processed through PCI-DSS compliant payment processors. We do not store full credit card numbers on our servers. For recurring payments, tokenized payment information is stored with our payment service providers following stringent security standards.</p>
+                </div>
+                
+                <h2>5. International Data Transfers</h2>
+                <p>Your information may be transferred to — and maintained on — computers located outside of your state, province, country, or other governmental jurisdiction where the data protection laws may differ from those in your jurisdiction.</p>
+                
+                <p>If you are located outside the United States and choose to provide information to us, please note that we transfer the data, including personal information, to the United States and process it there.</p>
+                
+                <p>For users in the European Economic Area (EEA), Switzerland, or UK, we implement appropriate safeguards for such transfers as required by applicable data protection laws, such as:</p>
+                <ul>
+                    <li>The European Commission's Standard Contractual Clauses</li>
+                    <li>Other legally recognized mechanisms for international data transfers</li>
+                </ul>
+                
+                <p>By using our Site or providing your information, you consent to this transfer, storage, and processing.</p>
+                
+                <h2>6. Data Retention</h2>
+                <p>We retain personal information only for as long as necessary to fulfill the purposes for which it was collected, including for the purposes of satisfying any legal, accounting, or reporting requirements.</p>
+                
+                <h3>Retention Periods Depend On:</h3>
+                <ul>
+                    <li><strong>Order Information:</strong> Retained for at least 7 years for tax and warranty purposes</li>
+                    <li><strong>Customer Accounts:</strong> Retained while active and for a reasonable period afterward for reorder convenience</li>
+                    <li><strong>Marketing Data:</strong> Retained until you opt out or for 2 years of inactivity</li>
+                    <li><strong>Website Analytics:</strong> Typically retained for 26 months</li>
+                    <li><strong>Customer Service Records:</strong> Retained for 5 years to support future inquiries</li>
+                </ul>
+                
+                <p>When we no longer need personal information, we securely delete or anonymize it. Backup copies may persist for a limited time before being overwritten.</p>
+                
+                <h2>7. Your Data Protection Rights</h2>
+                <p>Depending on your location and applicable law, you may have certain rights regarding your personal information:</p>
+                
+                <h3>Access and Portability</h3>
+                <p>You may request access to the personal information we hold about you and receive a copy in a structured, commonly used format.</p>
+                
+                <h3>Correction</h3>
+                <p>You may request correction of inaccurate or incomplete personal information.</p>
+                
+                <h3>Deletion</h3>
+                <p>You may request deletion of your personal information when it's no longer necessary for our purposes or when you withdraw consent (subject to legal retention requirements).</p>
+                
+                <h3>Restriction and Objection</h3>
+                <p>You may request that we restrict processing of your information or object to certain processing activities (like direct marketing).</p>
+                
+                <h3>Withdraw Consent</h3>
+                <p>Where we rely on consent for processing, you may withdraw consent at any time without affecting the lawfulness of processing based on consent before its withdrawal.</p>
+                
+                <h3>Lodge Complaints</h3>
+                <p>You have the right to lodge a complaint with a supervisory authority in your jurisdiction.</p>
+                
+                <div class="highlight-box">
+                    <h4>Exercising Your Rights</h4>
+                    <p>To exercise any of these rights, please contact us using the information in the "Contact Us" section below. We may need to verify your identity before processing your request. We will respond within the time required by applicable law.</p>
+                    <p>Note that certain information may be exempt from such requests in some circumstances, such as when we need to keep processing your information for our legitimate interests or to comply with a legal obligation.</p>
+                </div>
+                
+                <h2>8. Cookies and Tracking Technologies</h2>
+                <p>We use cookies and similar tracking technologies to track activity on our Site and hold certain information. For detailed information about the cookies we use and your choices regarding cookies, please see our <a href="cookies.html">Cookie Policy</a>.</p>
+                
+                <h2>9. Third-Party Websites</h2>
+                <p>Our Site may contain links to third-party websites. This Privacy Policy does not apply to those websites, which have their own privacy policies. We encourage you to review the privacy policies of any third-party sites you visit.</p>
+                
+                <h2>10. Children's Privacy</h2>
+                <p>Our Site is not intended for children under 16 years of age. We do not knowingly collect personal information from children under 16. If we learn we have collected such information, we will delete it. If you believe a child has provided us with personal information, please contact us.</p>
+                
+                <h2>11. Changes to This Privacy Policy</h2>
+                <p>We may update this Privacy Policy from time to time. We will notify you of changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. Material changes will be communicated through additional channels like email when appropriate.</p>
+                
+                <p>You are advised to review this Privacy Policy periodically for any changes. Changes are effective when posted.</p>
+                
+                <h2>12. Contact Us</h2>
+                <p>If you have questions about this Privacy Policy or our privacy practices, please contact us:</p>
+                <ul>
+                    <li><strong>By email:</strong> privacy@trowoodcraft.com</li>
+                    <li><strong>By mail:</strong> 123 Artisan Way, Woodcraft District, Portland, OR 97209</li>
+                    <li><strong>By phone:</strong> (503) 555-0192</li>
+                </ul>
+                
+                <p>For EU/UK residents, you may contact our Data Protection Officer at dpo@trowoodcraft.com.</p>
+                
+                <div class="update-date">
+                    <p>This Privacy Policy was last updated on June 15, 2023.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>About TrowoodCraft</h3>
+                    <p>Specializing in custom-made wooden furniture, blending heritage techniques with modern aesthetics. Crafting timeless pieces since 2010.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#collections">Collections</a></li>
+                        <li><a href="#custom">Custom Orders</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Customer Service</h3>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping & Delivery</a></li>
+                        <li><a href="#">Care Instructions</a></li>
+                        <li><a href="#">Warranty Information</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Visit Our Workshop</h3>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Artisan Way<br>
+                        Woodcraft District<br>
+                        Portland, OR 97209</p>
+                        <p><i class="fas fa-phone"></i> (503) 555-0192</p>
+                        <p><i class="fas fa-envelope"></i> hello@trowoodcraft.com</p>
+                        <p><i class="fas fa-clock"></i> Mon-Fri: 9am-5pm<br>
+                        Sat: 10am-3pm<br>
+                        Sun: Closed</p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 TrowoodCraft. All Rights Reserved. | Crafting Timeless Living.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

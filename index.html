@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrowoodCraft - Crafting Timeless Living</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #5D4037; /* Deep Walnut Brown */
+            --accent-beige: #D7CCC8; /* Sandstone Beige */
+            --accent-green: #8E9E82; /* Olive Green */
+            --accent-grey: #424242; /* Iron Grey */
+            --text-light: #f5f5f5;
+            --text-dark: #333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--accent-beige);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 50px;
+            margin-right: 15px;
+        }
+        
+        .logo-text h1 {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .logo-text p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        
+        /* Navigation Styles */
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-light);
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+        }
+        
+        .hero-content h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-content p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary-color);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--text-light);
+        }
+        
+        .btn:hover {
+            background-color: rgba(93, 64, 55, 0.8);
+            transform: translateY(-3px);
+        }
+        
+        .btn-outline:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background-color: var(--text-light);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--primary-color);
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .about-text h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        
+        .about-image {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Collections Section */
+        .collections {
+            padding: 80px 0;
+            background-color: var(--accent-beige);
+        }
+        
+        .collection-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .collection-card {
+            background-color: var(--text-light);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .collection-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .collection-img {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .collection-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .collection-card:hover .collection-img img {
+            transform: scale(1.1);
+        }
+        
+        .collection-info {
+            padding: 20px;
+        }
+        
+        .collection-info h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .collection-info p {
+            margin-bottom: 15px;
+            color: var(--accent-grey);
+        }
+        
+        .collection-info .btn {
+            display: inline-block;
+            padding: 8px 20px;
+            font-size: 14px;
+        }
+        
+        /* Craftsmanship Section */
+        .craftsmanship {
+            padding: 80px 0;
+            background-color: var(--text-light);
+        }
+        
+        .craftsmanship-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .craft-item {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: var(--accent-beige);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .craft-item:hover {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            transform: translateY(-5px);
+        }
+        
+        .craft-item i {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .craft-item:hover i {
+            color: var(--text-light);
+        }
+        
+        .craft-item h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        
+        /* Gallery Section */
+        .gallery {
+            padding: 80px 0;
+            background-color: var(--accent-beige);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .gallery-item {
+            height: 250px;
+            overflow: hidden;
+            border-radius: 8px;
+            position: relative;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(93, 64, 55, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        .gallery-overlay h3 {
+            color: var(--text-light);
+            font-size: 22px;
+            text-align: center;
+        }
+        
+        /* Custom Order Section */
+        .custom-order {
+            padding: 80px 0;
+            background-color: var(--text-light);
+        }
+        
+        .order-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .step {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--accent-beige);
+            border-radius: 8px;
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            border-radius: 50%;
+            line-height: 40px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .step h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        /* Blog Section */
+        .blog {
+            padding: 80px 0;
+            background-color: var(--accent-beige);
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .blog-card {
+            background-color: var(--text-light);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .blog-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .blog-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .blog-content {
+            padding: 20px;
+        }
+        
+        .blog-content h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .blog-content .meta {
+            font-size: 14px;
+            color: var(--accent-grey);
+            margin-bottom: 15px;
+        }
+        
+        .blog-content p {
+            margin-bottom: 15px;
+        }
+        
+        .read-more {
+            display: inline-block;
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            padding: 80px 0;
+            background-color: var(--text-light);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background-color: var(--accent-beige);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .testimonial-card .quote {
+            font-size: 16px;
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .testimonial-card .quote::before {
+            content: '"';
+            font-size: 50px;
+            color: var(--primary-color);
+            opacity: 0.2;
+            position: absolute;
+            top: -20px;
+            left: -10px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+        
+        .author-info h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+        
+        .author-info p {
+            font-size: 14px;
+            color: var(--accent-grey);
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 60px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent-beige);
+        }
+        
+        .footer-col p {
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            opacity: 1;
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--text-light);
+            text-align: center;
+            line-height: 40px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--accent-beige);
+            color: var(--primary-color);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-bottom p {
+            opacity: 0.6;
+            font-size: 14px;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image {
+                order: -1;
+            }
+            
+            .hero-content h2 {
+                font-size: 36px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo {
+                margin-bottom: 20px;
+                justify-content: center;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 5px 10px;
+            }
+            
+            .hero-content h2 {
+                font-size: 28px;
+            }
+            
+            .hero-content p {
+                font-size: 16px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+        
+        /* Additional Content Styles */
+        .long-content {
+            padding: 50px 0;
+            background-color: var(--text-light);
+        }
+        
+        .long-content h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        
+        .long-content h3 {
+            color: var(--primary-color);
+            margin: 30px 0 15px;
+            font-size: 22px;
+        }
+        
+        .long-content p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .long-content ul, .long-content ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        
+        .long-content li {
+            margin-bottom: 10px;
+        }
+        
+        .disclaimer {
+            background-color: var(--accent-beige);
+            padding: 40px;
+            border-radius: 8px;
+            margin: 50px 0;
+        }
+        
+        .disclaimer h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .customer-satisfaction {
+            background-color: var(--text-light);
+            padding: 40px;
+            border-radius: 8px;
+            margin: 50px 0;
+            border: 1px solid var(--accent-beige);
+        }
+        
+        .customer-satisfaction h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-text">
+                    <h1>TrowoodCraft</h1>
+                    <p>Crafting Timeless Living</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>True Craftsmanship in Every Grain</h2>
+            <p>Custom-made wooden furniture blending heritage techniques with modern aesthetics</p>
+            <div class="cta-buttons">
+                <a href="#collections" class="btn">View Collections</a>
+                <a href="#custom" class="btn btn-outline">Customize a Piece</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Story</h2>
+                <p>TrowoodCraft specializes in custom-made wooden furniture, blending heritage techniques with modern aesthetics.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Built with Heart. Designed to Last.</h3>
+                    <p>Founded in 2010 by master craftsman Thomas Woodrow, TrowoodCraft began as a small workshop dedicated to preserving traditional woodworking techniques while adapting them to contemporary design sensibilities. What started as a passion project has grown into a respected name in artisanal furniture, with our pieces gracing homes, offices, and boutique establishments across the country.</p>
+                    <p>Our philosophy is simple: furniture should be built to last generations, not just seasons. In an era of disposable goods, we stand for honest craftsmanship, durable materials, and tailored design. Each piece we create tells a story - of the wood's origin, the craftsman's skill, and the client's vision coming together to create something truly special.</p>
+                    <p>We carefully select each piece of wood for its unique character and quality. Our artisans then apply time-honored techniques to transform these raw materials into functional works of art. The result is furniture that doesn't just serve a purpose, but enriches your living space with warmth, beauty, and soul.</p>
+                    <a href="#" class="btn">Learn More About Our Craft</a>
+                </div>
+                <div class="about-image">
+                    <img src="p1.webp" alt="Woodworking in our studio">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section class="collections" id="collections">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Collections</h2>
+                <p>Explore our signature lines of handcrafted furniture</p>
+            </div>
+            <div class="collection-grid">
+                <div class="collection-card">
+                    <div class="collection-img">
+                        <img src="p2.avif" alt="Heritage Line">
+                    </div>
+                    <div class="collection-info">
+                        <h3>Heritage Line</h3>
+                        <p>Classic woodwork with traditional joinery techniques that stand the test of time.</p>
+                        <a href="#" class="btn">View Collection</a>
+                    </div>
+                </div>
+                <div class="collection-card">
+                    <div class="collection-img">
+                        <img src="p3.avif" alt="Modern Grain">
+                    </div>
+                    <div class="collection-info">
+                        <h3>Modern Grain</h3>
+                        <p>Minimalist forms with rich finishes that complement contemporary spaces.</p>
+                        <a href="#" class="btn">View Collection</a>
+                    </div>
+                </div>
+                <div class="collection-card">
+                    <div class="collection-img">
+                        <img src="p4.avif" alt="Rust & Root">
+                    </div>
+                    <div class="collection-info">
+                        <h3>Rust & Root</h3>
+                        <p>Live edge and rustic furniture that celebrates the natural beauty of wood.</p>
+                        <a href="#" class="btn">View Collection</a>
+                    </div>
+                </div>
+                <div class="collection-card">
+                    <div class="collection-img">
+                        <img src="p5.avif" alt="Bespoke Studio">
+                    </div>
+                    <div class="collection-info">
+                        <h3>Bespoke Studio</h3>
+                        <p>Fully custom design-to-delivery service for your unique vision.</p>
+                        <a href="#" class="btn">Start Your Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Craftsmanship Section -->
+    <section class="craftsmanship">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Craftsmanship</h2>
+                <p>What sets TrowoodCraft apart is our unwavering commitment to quality</p>
+            </div>
+            <div class="craftsmanship-grid">
+                <div class="craft-item">
+                    <i class="fas fa-hammer"></i>
+                    <h3>Handmade by Master Artisans</h3>
+                    <p>Each piece is crafted by skilled artisans with decades of experience in traditional woodworking techniques.</p>
+                </div>
+                <div class="craft-item">
+                    <i class="fas fa-tree"></i>
+                    <h3>Premium Hardwood</h3>
+                    <p>We use only the finest teak, sheesham, oak, and walnut, carefully selected for quality and character.</p>
+                </div>
+                <div class="craft-item">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Eco-friendly Finishing</h3>
+                    <p>Natural oils and non-toxic coatings protect both your family and the environment.</p>
+                </div>
+                <div class="craft-item">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <h3>Traditional Joinery</h3>
+                    <p>Mortise & tenon, dovetail, and other time-tested techniques ensure lasting durability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Gallery</h2>
+                <p>See our furniture in real homes and our craftsmen at work</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="p6.avif" alt="Dining Room">
+                    <div class="gallery-overlay">
+                        <h3>Heritage Dining Set</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="p7.avif" alt="Living Room">
+                    <div class="gallery-overlay">
+                        <h3>Modern Grain Coffee Table</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="p8.avif" alt="Bedroom">
+                    <div class="gallery-overlay">
+                        <h3>Rust & Root Bed Frame</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="p9.avif" alt="Workshop">
+                    <div class="gallery-overlay">
+                        <h3>Master Craftsman at Work</h3>
+                    </div>
+                </div>
+              
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Order Section -->
+    <section class="custom-order" id="custom">
+        <div class="container">
+            <div class="section-title">
+                <h2>Custom Order Process</h2>
+                <p>Bring your vision to life with our bespoke furniture service</p>
+            </div>
+            <div class="order-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Design Consultation</h3>
+                    <p>Share your ideas, space requirements, and inspiration with our design team.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Material Selection</h3>
+                    <p>Choose from our premium hardwoods and finishes to match your style.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Crafting Begins</h3>
+                    <p>Our artisans handcraft your piece with meticulous attention to detail.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Delivery & Installation</h3>
+                    <p>We deliver and install your furniture with white-glove service.</p>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <a href="#" class="btn">Start Your Custom Order</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog">
+        <div class="container">
+            <div class="section-title">
+                <h2>The Craft Log</h2>
+                <p>Insights, stories, and tips from our workshop</p>
+            </div>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    
+                    <div class="blog-content">
+                        <h3>Why Custom Wood Furniture Is Worth It</h3>
+                        <div class="meta">June 15, 2023 | 5 min read</div>
+                        <p>Investing in custom furniture means investing in quality, sustainability, and pieces that tell your story...</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                  
+                    <div class="blog-content">
+                        <h3>How We Source Sustainable Timber</h3>
+                        <div class="meta">May 28, 2023 | 7 min read</div>
+                        <p>Our commitment to responsible forestry practices ensures beautiful furniture without compromising the environment...</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    
+                    <div class="blog-content">
+                        <h3>The Stories Behind Our Signature Pieces</h3>
+                        <div class="meta">April 12, 2023 | 8 min read</div>
+                        <p>Each design in our collection has a unique origin story, from client inspirations to artisan innovations...</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    
+    <!-- Long Content Section -->
+    <section class="long-content">
+        <div class="container">
+            <h2>The Art and Soul of Woodcraft</h2>
+            <p>At TrowoodCraft, we believe that furniture should be more than just functional—it should tell a story, evoke emotion, and stand the test of time. Our journey with each piece begins long before the first cut is made, with a deep respect for the material and the traditions that guide our craft.</p>
+            
+            <h3>The Wood Selection Process</h3>
+            <p>Our commitment to quality starts at the source. We work with sustainable forestry operations and reclaimed wood suppliers to obtain the finest materials. Each plank is carefully inspected for:</p>
+            <ul>
+                <li><strong>Grain pattern:</strong> We look for interesting, consistent grain that will enhance the finished piece</li>
+                <li><strong>Density and hardness:</strong> Ensuring durability appropriate for the furniture's purpose</li>
+                <li><strong>Moisture content:</strong> Properly dried wood prevents warping and cracking over time</li>
+                <li><strong>Natural characteristics:</strong> Knots, burls, and other features that add character</li>
+            </ul>
+            
+            <h3>Traditional Techniques Meet Modern Design</h3>
+            <p>While we honor centuries-old woodworking methods, we're not bound by tradition. Our craftsmen skillfully blend techniques like:</p>
+            <ul>
+                <li><strong>Mortise and tenon joinery:</strong> Dating back to ancient Egypt, this method creates incredibly strong joints without metal fasteners</li>
+                <li><strong>Dovetail construction:</strong> The hallmark of quality drawer construction, cut by hand for precision</li>
+                <li><strong>Steam bending:</strong> Allows for graceful curves while maintaining wood strength</li>
+                <li><strong>Hand carving:</strong> Adds decorative elements that machines can't replicate</li>
+            </ul>
+            <p>These traditional methods are combined with contemporary design sensibilities to create pieces that feel both timeless and fresh. Our designers stay attuned to modern living needs, creating furniture that fits today's lifestyles while maintaining the quality of heirloom pieces.</p>
+            
+            <h3>The Finishing Touch</h3>
+            <p>Our finishing process is where the wood's true beauty emerges. We use:</p>
+            <ul>
+                <li><strong>Natural oil finishes:</strong> Penetrate the wood to enhance grain while protecting the surface</li>
+                <li><strong>Low-VOC lacquers:</strong> For pieces needing more protection, we use environmentally friendly options</li>
+                <li><strong>Hand-rubbed techniques:</strong> Create depth and luster that spray finishes can't match</li>
+                <li><strong>Custom stains:</strong> Mixed to achieve exactly the right tone for your space</li>
+            </ul>
+            <p>Each finish is applied by hand, with multiple coats sanded between applications for a silky-smooth surface that feels as good as it looks.</p>
+            
+            <h3>Sustainability at Our Core</h3>
+            <p>We're committed to responsible woodcraft that honors the environment:</p>
+            <ul>
+                <li><strong>Sustainably harvested wood:</strong> All our materials come from responsibly managed forests or reclaimed sources</li>
+                <li><strong>Zero-waste philosophy:</strong> Scraps become smaller items, sawdust is composted, and nothing goes to landfill</li>
+                <li><strong>Non-toxic materials:</strong> Safe for your family and our craftsmen</li>
+                <li><strong>Local sourcing:</strong> We prioritize domestic woods to reduce transportation impact</li>
+            </ul>
+            <p>This commitment extends beyond materials to how we run our workshop, from energy-efficient lighting to solar panels that power much of our operation.</p>
+            
+            <h3>The Custom Design Experience</h3>
+            <p>Our bespoke service is a collaborative journey:</p>
+            <ol>
+                <li><strong>Initial consultation:</strong> We discuss your needs, style preferences, and space requirements</li>
+                <li><strong>Concept development:</strong> Sketches and 3D renderings help visualize the piece</li>
+                <li><strong>Material selection:</strong> Choose from our inventory of premium woods and finishes</li>
+                <li><strong>Prototype review:</strong> For complex pieces, we may create a mockup</li>
+                <li><strong>Crafting phase:</strong> Regular updates with photos of your piece in progress</li>
+                <li><strong>Final approval:</strong> We make any last adjustments before delivery</li>
+                <li><strong>White-glove delivery:</strong> Careful installation in your home</li>
+            </ol>
+            <p>This personalized approach ensures you get exactly what you envision, with the quality only handcrafted furniture can provide.</p>
+            
+            <h3>Caring for Your Investment</h3>
+            <p>Proper care will keep your TrowoodCraft furniture beautiful for generations:</p>
+            <ul>
+                <li><strong>Regular dusting:</strong> Use a soft, lint-free cloth to prevent buildup</li>
+                <li><strong>Avoid direct sunlight:</strong> Can cause fading over time</li>
+                <li><strong>Use coasters and pads:</strong> Protect surfaces from heat and moisture</li>
+                <li><strong>Seasonal maintenance:</strong> Reapply oil finishes as needed (we provide instructions)</li>
+                <li><strong>Professional restoration:</strong> We offer refurbishment services for older pieces</li>
+            </ul>
+            <p>Unlike mass-produced furniture, our pieces can be repaired and refinished as needed, extending their lifespan indefinitely.</p>
+            
+            <h3>Why Handcrafted Matters</h3>
+            <p>In a world of disposable furniture, choosing handcrafted means:</p>
+            <ul>
+                <li><strong>Superior durability:</strong> Joints that won't loosen, woods that won't warp</li>
+                <li><strong>Unique character:</strong> No two pieces are exactly alike</li>
+                <li><strong>Artistic value:</strong> Furniture as functional art</li>
+                <li><strong>Environmental benefit:</strong> Fewer replacements mean less waste</li>
+                <li><strong>Economic impact:</strong> Supporting traditional crafts and local artisans</li>
+                <li><strong>Emotional connection:</strong> Pieces with soul that become part of your family story</li>
+            </ul>
+            <p>When you choose TrowoodCraft, you're not just buying furniture—you're investing in a legacy that will outlast trends and temporary styles.</p>
+            
+            <div class="disclaimer">
+                <h2>Disclaimer</h2>
+                <p>The information contained on this website is for general information purposes only. TrowoodCraft assumes no responsibility for errors or omissions in the contents of the website.</p>
+                <p>In no event shall TrowoodCraft be liable for any special, direct, indirect, consequential, or incidental damages or any damages whatsoever, whether in an action of contract, negligence or other tort, arising out of or in connection with the use of the website or the contents of the website. TrowoodCraft reserves the right to make additions, deletions, or modifications to the contents on the website at any time without prior notice.</p>
+                <p>TrowoodCraft does not warrant that the website is free of viruses or other harmful components. All products are subject to natural variations in wood grain, color, and texture, which are inherent characteristics of natural materials and not defects. These variations are what make each piece unique.</p>
+                <p>Custom orders may require longer lead times depending on complexity and current workshop capacity. All delivery dates are estimates and not guaranteed. Prices are subject to change without notice. While we make every effort to accurately represent our products, actual colors and finishes may vary slightly from what appears on your screen.</p>
+                <p>By using our website and placing orders, you acknowledge that you have read, understood, and agree to be bound by these terms. If you do not agree to these terms, please do not use our website or services.</p>
+            </div>
+            
+            <div class="customer-satisfaction">
+                <h2>Customer Satisfaction Guarantee</h2>
+                <p>At TrowoodCraft, we stand behind every piece we create. Our customer satisfaction guarantee ensures that you'll love your furniture for generations to come.</p>
+                <p><strong>Quality Assurance:</strong> Every piece undergoes rigorous inspection before leaving our workshop. We check for structural integrity, finish quality, and overall craftsmanship.</p>
+                <p><strong>Five-Year Craftsmanship Warranty:</strong> We warrant our furniture against defects in materials and workmanship for five years from the date of delivery. This includes repairs or replacement at our discretion.</p>
+                <p><strong>Lifetime Support:</strong> Even after the warranty period, we're here to help with maintenance advice, refinishing services, and repairs to keep your furniture looking its best.</p>
+                <p><strong>30-Day Comfort Guarantee:</strong> If you're not completely satisfied with your purchase, contact us within 30 days of delivery to discuss options including adjustments, refinishing, or in rare cases, return.</p>
+                <p><strong>Custom Order Commitment:</strong> For bespoke pieces, we provide detailed drawings and material samples before construction begins to ensure the final product meets your expectations.</p>
+                <p>Our commitment to your satisfaction doesn't end at delivery. We consider every client a lifelong member of the TrowoodCraft family and are always available to answer questions or provide care recommendations for your furniture.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>About TrowoodCraft</h3>
+                    <p>Specializing in custom-made wooden furniture, blending heritage techniques with modern aesthetics. Crafting timeless pieces since 2010.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#collections">Collections</a></li>
+                        <li><a href="#custom">Custom Orders</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Customer Service</h3>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping & Delivery</a></li>
+                        <li><a href="#">Care Instructions</a></li>
+                        <li><a href="#">Warranty Information</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Visit Our Workshop</h3>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Artisan Way<br>
+                        Woodcraft District<br>
+                        Portland, OR 97209</p>
+                        <p><i class="fas fa-phone"></i> (503) 555-0192</p>
+                        <p><i class="fas fa-envelope"></i> hello@trowoodcraft.com</p>
+                        <p><i class="fas fa-clock"></i> Mon-Fri: 9am-5pm<br>
+                        Sat: 10am-3pm<br>
+                        Sun: Closed</p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 TrowoodCraft. All Rights Reserved. | Crafting Timeless Living.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
